@@ -1,0 +1,22 @@
+.useralbumslist-container {
+	box-shadow: 0px 0px 10px #0000005e;
+	padding: 0 12px 12px 12px;
+	margin: 12px 0 12px 12px;
+	border-radius: 5px;
+}
+
+.useralbumslist-container>h2 {
+	border-bottom: 1px solid black;
+	padding-bottom: 8px;
+}
+
+.useralbumslist-container ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.useralbumslist-container ul li {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}

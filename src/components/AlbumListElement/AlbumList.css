@@ -1,0 +1,12 @@
+.albumlist-container {
+	box-shadow: 0px 0px 10px #0000005e;
+	margin-top: 12px;
+	padding: 12px;
+	border-radius: 5px;
+}
+
+.albumlist--list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

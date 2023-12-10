@@ -1,0 +1,38 @@
+.photoelement-container {
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	margin: 4px;
+	position: relative;
+}
+
+.photoelement-container:hover,
+.photoelement-container:focus-within {
+	box-shadow: 1px 1px 4px #d1d1d1;
+	cursor: pointer;
+}
+
+.photoelement-container img {
+	border-radius: 5px;
+	border: 1px solid #FFF;
+}
+
+.photoelement-container:hover img,
+.photoelement-container:focus-within img {
+	transform: scale(1.02);
+}
+
+.photoelement--hoverinfo {
+	display: none;
+	top: calc(100% - 25px);
+	left: calc(100% - 25px);
+	height: 28px;
+	cursor: default;
+}
+
+.photoelement-container:hover .photoelement--hoverinfo,
+.photoelement-container:focus-within .photoelement--hoverinfo {
+	display: flex;
+	position: absolute;
+	z-index: 10;
+}

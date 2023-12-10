@@ -1,0 +1,107 @@
+main {
+	margin: 0 12px;
+}
+
+header {
+	position: relative;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.backbuttons {
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	border: 1px solid #838383;
+	border-radius: 50%;
+	background-color: transparent;
+	font-size: 1.3rem;
+	display: block;
+	height: 30px;
+	width: 30px;
+	color: #838383;
+	cursor: pointer;
+	padding: 0;
+}
+a.backbuttons {
+	height: 28px;
+	width: 28px;
+}
+
+.backbuttons>svg {
+	padding-top: 3px;
+}
+
+.backbuttons:hover,
+.backbuttons:focus,
+.backbuttons:active {
+	background-color: #838383;
+	color: white;
+}
+
+.loaderparent {
+	width: 100%;
+}
+
+.loader {
+	display: inline-block;
+	animation: rotation 1s linear infinite;
+}
+
+.loader>* {
+	height: 35px;
+	width: 35px;
+}
+
+.copylink-btn {
+	display: flex;
+	align-items: center;
+	background-color: #e7e1e1;
+	border: 1px solid rgb(19, 19, 19);
+	color: rgb(19, 19, 19);
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+}
+
+.copylink-btn:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+.userpage--infocontainer {
+	display: flex;
+	justify-content: space-between;
+
+	text-align: left;
+}
+
+.userpage--infocontainer>* {
+	max-width: 50%;
+	width: 50%;
+}
+
+.text-newrow {
+	display: block;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
