@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { BackToGallery } from "../BackToGalleryElement/BackToGallery"
 import { InfoPageBackButtonElement } from "../InfoPageBackButtonElement/InfoPageBackButton"
 

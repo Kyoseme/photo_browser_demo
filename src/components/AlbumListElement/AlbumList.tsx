@@ -25,13 +25,14 @@ export const AlbumListElement = (props: AlbumListProps) => {
 				setAlbumPhotos(data);
 			});
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [props.id]);
 
 	return (
 		<div className="albumlist-container">
 			<h2>Other pictures from album: {props.title}</h2>
 			<div className="albumlist--list">
-				{albumPhotos.filter(photo => photo.id != props.photoId).map(photo =>
+				{albumPhotos.filter(photo => photo.id !== props.photoId).map(photo =>
 					<PhotoElement
 						key={photo.id}
 						albumId={photo.albumId}

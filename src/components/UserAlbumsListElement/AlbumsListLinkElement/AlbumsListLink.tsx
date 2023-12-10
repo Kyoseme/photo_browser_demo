@@ -22,6 +22,7 @@ export const AlbumsListLinkElement = (props: AlbumListLinkProps) => {
 				setLinkToImage("/img/" + data[0].id );
 			});
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

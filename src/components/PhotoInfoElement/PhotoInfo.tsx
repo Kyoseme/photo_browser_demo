@@ -25,6 +25,8 @@ export const PhotoInfoElement = (props: PhotoInfoElementParams) => {
 				setUserName( data.username );
 			});
 		};
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [props.userId]);
 
 	const linkToUser = "/user/" + props.userId;
@@ -32,7 +34,7 @@ export const PhotoInfoElement = (props: PhotoInfoElementParams) => {
 
 	return (
 		<section className="photoinfoelement-container">
-			<img className="photoinfoelement--image" src={props.url} />
+			<img className="photoinfoelement--image" src={props.url} alt="" />
 			<div className="photoinfoelement--info">
 				<h2>{props.title}</h2>
 				<div>

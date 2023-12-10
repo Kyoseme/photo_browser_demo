@@ -31,6 +31,8 @@ export const GalleryElement = () => {
 		} else if (start === 5000) {
 			setNoMore(true);
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [inView]);
 
 

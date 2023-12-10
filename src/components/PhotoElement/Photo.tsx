@@ -19,7 +19,7 @@ export const PhotoElement = (props: PhotoElementProps) => {
 	return (
 		<div className='photoelement-container'>
 			<Link to={linkToImg}>
-				<img className="photoelement--thumbnail" src={props.thumbnailUrl} title={props.title} />
+				<img className="photoelement--thumbnail" src={props.thumbnailUrl} title={props.title} alt="" />
 			</Link>
 			<div id={hoverId} className="photoelement--hoverinfo">
 				<button aria-label='Copy link to image' title='Copy image link' className='photoelement--copylink copylink-btn' onClick={() => { navigator.clipboard.writeText(fullLink) }}><FaLink /></button>

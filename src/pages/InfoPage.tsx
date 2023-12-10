@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { InfoPageBackButtonElement } from "../components/InfoPageBackButtonElement/InfoPageBackButton";
 import { PhotoInfoElement } from "../components/PhotoInfoElement/PhotoInfo";
 import { AlbumListElement } from "../components/AlbumListElement/AlbumList";
 import { PhotoModel } from "../components/models/photo.model";
@@ -33,6 +32,7 @@ export const InfoPage = () => {
 	useEffect(() => {
 		if (idNumber && idNumber > 0 && idNumber <= 5000) {
 			setIdCheck(true);
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 			id = idNumber.toString();
 		}
 
@@ -47,6 +47,7 @@ export const InfoPage = () => {
 				setUserId(data.userId);
 			});
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [idNumber]);
 
 	return (

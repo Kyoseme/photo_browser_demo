@@ -29,6 +29,7 @@ export const UserPage = () => {
 	useEffect(() => {
 		if (idNumber > 0 && idNumber <= 10) {
 			setIdCheck(true);
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 			id = idNumber.toString();
 		}
 
@@ -39,6 +40,7 @@ export const UserPage = () => {
 		getUserAlbumsData().then((data) => {
 			setUserAlbumsData(data);
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
