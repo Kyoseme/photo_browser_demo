@@ -13,23 +13,37 @@ export const GalleryElement = () => {
 	const [ref, inView] = useInView();
 
 
-	function getPhotos({ start = 0 }: { start?: number }) {
+	function getFirstPhotos({ start = 0 }: { start?: number }) {
+		return fetch(`https://jsonplaceholder.typicode.com/photos?_limit=100&_start=${start}`)
+			.then((res) => res.json()
+			);
+	}
+
+	function getMorePhotos({ start = 0 }: { start?: number }) {
 		return fetch(`https://jsonplaceholder.typicode.com/photos?_limit=20&_start=${start}`)
 			.then((res) => res.json()
 			);
 	}
 
 	useEffect(() => {
-		if (inView && !isLoading && start < 5000) {
-			setIsLoading(true);
-			getPhotos({ start }).then((data) => {
-
-				setPhotos((prevPhotos) => [...prevPhotos, ...data]);
-				setStart((prevStart) => prevStart + 20);
-				setIsLoading(false);
+		if (start === 0) {
+			getFirstPhotos({ start }).then((data) => {
+				setPhotos(data);
+				setStart(100);
 			});
-		} else if (start === 5000) {
-			setNoMore(true);
+
+		} else {
+			if (inView && !isLoading && start < 5000) {
+				setIsLoading(true);
+				getMorePhotos({ start }).then((data) => {
+
+					setPhotos((prevPhotos) => [...prevPhotos, ...data]);
+					setStart((prevStart) => prevStart + 20);
+					setIsLoading(false);
+				});
+			} else if (start === 5000) {
+				setNoMore(true);
+			}
 		}
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
